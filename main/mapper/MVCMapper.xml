@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.MVCMapper"> 
+   	
+ 	<!-- 스케줄러 데이터 UPDATE 부분 -->
+	<delete id="deleteMovieCount" parameterType="com.sorzz.mvc.vo.MCMovie">
+		DELETE 
+		FROM movie_count
+		WHERE open_year = #{openYear}
+	</delete> 
+	
+ 	<insert id="insertMovieCount" parameterType="com.sorzz.mvc.vo.MCMovie">
+ 		INSERT INTO movie_count 
+ 		(
+ 			open_year,
+ 			code_kind,
+ 			code_key,
+ 			count
+ 		)
+ 		VALUES 
+ 		(
+ 			#{openYear},
+ 			#{codeKind},	
+ 			#{codeKey},
+ 			#{count}		
+ 		)
+ 	</insert>  
+ 	
+ 	
+	<!-- 범주 목록 SELECT 부분 -->
+ 	<select id="getNationList" resultType="com.sorzz.mvc.vo.MVOption"> 
+ 		SELECT   
+  			nation_cd as optionCD,  			
+  			nation_nm as optionNM  		
+ 		FROM nation  
+ 	</select>
+ 	
+ 	
+ 	<select id="getGenreList" resultType="com.sorzz.mvc.vo.MVOption"> 
+ 		SELECT   
+  			genre_cd as optionCD,  		
+  			genre_nm as optionNM  		
+ 		FROM genre
+ 	</select>
+	 
+ 	<select id="getChartValue" resultType="com.sorzz.mvc.vo.MCMovie">
+	   SELECT 
+          code_key as codeKey,
+         open_year as openYear,
+          code_kind as codeKind,
+          count as count
+      FROM movie_count
+      WHERE open_year BETWEEN ${start} AND ${end}
+      AND code_kind = #{codeKind}
+      AND code_key in ${codeKey}
+      ORDER BY code_key, open_year;
+		 
+	</select>	
+	
+ 	<select id="codeToNameN" resultType="String">
+	   	SELECT nation_nm
+		FROM nation 
+		WHERE nation_cd IN ${keys}
+		ORDER BY nation_cd; 
+	</select>	
+	
+ 	<select id="codeToNameG" resultType="String">
+	   	SELECT genre_nm
+		FROM genre   
+		WHERE genre_cd IN ${keys}
+		ORDER BY genre_cd; 
+	</select>	
+	
+	<!-- 최근 동기화 시간 -->
+	<select id="getPatchTime" resultType="String">
+	   	SELECT MAX(patch_time) FROM patch; 
+	</select>	
+	
+	<insert id="insertPatchTime" parameterType="java.sql.Timestamp">
+ 		INSERT into patch 
+		values( #{updateDate} );
+ 	</insert>  
+ 	
+</mapper>
