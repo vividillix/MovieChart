@@ -15,7 +15,6 @@
 <script type="text/javascript" src="resources/js/export.js"></script>
 <script type="text/javascript" src="resources/js/handle_option.js"></script> 
 <script type="text/javascript" src="resources/js/draw_graph.js"></script>  
-<script type="text/javascript" src="resources/js/draw_pie.js"></script>  
 <script type="text/javascript" src="resources/js/yearpicker.js"></script>
 <script type="text/javascript" src="resources/js/html2canvas.js"></script>  
  
