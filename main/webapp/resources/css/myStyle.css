@@ -1,0 +1,331 @@
+
+/* -------------------- FONT------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Serif&family=Noto+Serif+KR:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+
+/* -------------------- TAG 별 속성------------------------ */
+
+
+body {
+    margin:0px;
+    padding : 0px;
+    font-family: 'Open Sans','Nanum Gothic';
+    background: rgb(0, 17, 5);
+}
+ 
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    line-height: 70px;
+    font-size: 25px;
+    padding-left: 30px;
+    font-weight: bold;
+    border-bottom: wheat 1px solid;
+} 
+
+
+h1{
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(243, 193, 55);
+    text-align: center;
+ }
+
+p{
+    color: wheat;
+    font-size: 14px;
+} 
+
+
+fieldset{
+    position: relative;
+    border: 0px solid rgba(245, 222, 179, 0.39);
+    border-bottom: dotted 1px wheat;
+    text-align: center;
+  	padding: 5px 10px 10px 10px;
+    color: wheat;
+}
+ 
+ label {
+  font-size: 15px;
+  top: -2px;
+  position: relative;
+  margin-right : 3px;
+	
+}
+ 
+ 
+div{
+  clear: left;
+}
+
+
+img {
+    margin: auto;
+    width: 100%;    
+}
+/* -------------------- ID attribute ------------------------ */
+
+#patchTime {
+	color: wheat;
+	font-weight: normal;
+	float: right;
+	right:50px;
+	position: relative;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+#set-range {
+    height: 50px;
+    text-align: center;
+    line-height: 50px; 
+}
+
+.set-years {
+    clear: none; 
+}
+
+.set-years p {
+     display: inline;
+     margin: 0px 10px 0 0;
+}
+  
+.year_div {
+    line-height: 50px;
+    height: 50px; 	
+    display: inline; 
+} 
+
+#years { 
+	height:50px;
+}
+  
+#content{
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+#intro {
+    color: rgb(255, 247, 226);
+    margin-bottom: 50px;
+    /* margin: 10px; */
+    font-size: 20px;
+}
+
+#setting {
+    color: wheat; 
+    background-color: rgba(255, 255, 255, 0);
+    margin: 10px;
+    border: wheat solid 2px;
+    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+    width: 600px;
+    border-radius: 20px;
+    
+}
+
+
+ 
+#result {
+     text-align: center; 
+     margin: 10px;
+    border: wheat solid 2px;
+     box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+     border-radius: 20px;
+    text-align: center;
+  	margin-top: 30px;
+}
+
+#sel_country,
+#sel_genre {
+  text-align: left;
+}
+ 
+#set-chart {
+  margin-bottom: 2%;
+}
+
+#result_chart { 
+  width: 100%;
+  height: 100%;
+ 
+  /* background-color: rgb(229, 234, 240,0.5); */
+}
+
+
+#line-chart{
+    z-index: -1;
+     width: 100%;
+   height: 100%;
+   background-color: rgba(255, 252, 239, 0.685);
+   margin-bottom:10px;
+}
+
+/* -------------------- Class attribute ------------------------ */
+
+.ddd {
+  background-color: rgba(0, 0, 0, 0.493);
+  position: relative;  
+  
+  z-index: 10;
+}
+ 
+.icon {
+	margin: 0 10px 0 10px;
+	width: 40px;
+} 
+ 
+input[type='text'] {
+    position: relative;
+    text-align:center;
+    line-height: 10px;
+}
+   
+
+input[type='text']:focus {
+    outline:none;
+}
+
+.label-r,
+.chart_r  {
+  position: relative;
+  top: -2px;
+  margin-right : 2px;
+  font-size: 14px;
+}
+
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 0px 10px 0px 20px;
+    height: 35px;
+    width: 160px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 192, 56, 0);
+    background-color: rgb(230, 195, 114);
+    font-size: 13px;
+}  
+
+
+.chart_pie_label {
+	color:rgb(255, 247, 233);
+}
+
+/* -------------- Button UI ----------------  */
+input[type='radio'],
+input[type='radio']:checked {
+  appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  margin-right: 0rem;
+}
+
+input[type='radio'] {
+  background-color: rgb(101, 116, 104);
+  border: 2px solid rgb(255, 247, 233);
+}
+input[type='radio']:checked {
+  background-color:rgb(253, 219, 23);
+  border: 2px solid rgb(255, 247, 233);
+}
+
+  /* loading animation */
+
+.black_background{ 
+  display: none; 
+  position: absolute; 
+  background: rgba(231, 236, 255, 0.801);
+  z-index:1001; -moz-opacity: 0.8; opacity:.80; 
+  filter: alpha(opacity=60); 
+  text-align: center;
+} 
+ 
+
+@keyframes ldio-2hgux1lg16z {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+.ldio-2hgux1lg16z > div > div {
+  transform-origin: 100px 100px;
+  animation: ldio-2hgux1lg16z 3.0303030303030303s linear infinite;
+  opacity: 0.8
+}
+.ldio-2hgux1lg16z > div > div > div {
+   position: absolute;
+   left: 30px;
+   top: 30px;
+   width: 70px;
+   height: 70px;
+   border-radius: 70px 0 0 0;
+   transform-origin: 100px 100px
+}
+.ldio-2hgux1lg16z > div div:nth-child(1) {
+   animation-duration: 0.7575757575757576s
+}
+.ldio-2hgux1lg16z > div div:nth-child(1) > div {
+   background: #292664;
+   transform: rotate(0deg);
+}
+.ldio-2hgux1lg16z > div div:nth-child(2) {
+   animation-duration: 1.0101010101010102s
+}
+.ldio-2hgux1lg16z > div div:nth-child(2) > div {
+   background: #667395;
+   transform: rotate(0deg);
+}.ldio-2hgux1lg16z > div div:nth-child(3) {
+   animation-duration: 1.5151515151515151s
+}
+.ldio-2hgux1lg16z > div div:nth-child(3) > div {
+   background: #94a9ce;
+   transform: rotate(0deg);
+}
+.ldio-2hgux1lg16z > div div:nth-child(4) {
+   animation-duration: 3.0303030303030303s
+}
+.ldio-2hgux1lg16z > div div:nth-child(4) > div {
+   background: #b5ccf1;
+   transform: rotate(0deg);
+}
+.loadingio-spinner-wedges-ynx2h61thk {
+   width: 200px;
+   height: 200px;
+   overflow: hidden;
+   background: #1289ff00;
+}
+.ldio-2hgux1lg16z {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+.ldio-2hgux1lg16z div { box-sizing: content-box; }
